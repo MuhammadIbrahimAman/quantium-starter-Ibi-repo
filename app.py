@@ -38,7 +38,7 @@ app.layout = html.Div(children = [
     )
 ])
 
-print("Reached server start...")
+print("Server has initialized...")
 # Deploy the app server
 if __name__ == "__main__":
     app.run(debug=True)
