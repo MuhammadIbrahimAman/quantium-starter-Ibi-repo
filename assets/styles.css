@@ -1,0 +1,54 @@
+/* Page background and global font */
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+/* Title styling */
+.page-title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;   
+}
+
+/* Radio button container styling */
+#region-filter {
+    display: inline-block;       /* shrink to content */
+    margin: 20px auto;           /* center horizontally */
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+/* Add hover effect over the radio buttons */
+#region-filter:hover {
+    border-color: #4A90E2;  /* soft blue */
+    box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+    transform: translateY(-2px);
+    transition: all 0.25s ease;
+}
+
+.dash-radioitems label:hover {
+    color: #4A90E2;    /* matching blue */
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+
+/* Graph card styling */
+#sales-line-chart {
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Radio button styling */
+.radio-style {
+    margin: 20px;
+    font-size: 18px;
+}
