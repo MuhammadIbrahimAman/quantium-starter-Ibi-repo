@@ -17,6 +17,19 @@ df['Date'] = pd.to_datetime(df['Date'])
 app = Dash(__name__, title="Pink Morsel Sales Dashboard")
 
 # We will define its layout now
+app.layout = html.Div(children = [
+    html.H1(
+        "Pink Morsel Sales Visualization Graph" ,
+        style = { "textAlign": "center"}
+    ),
+
+    dcc.Graph(
+        id = "sales-line-chart",
+        figure = fig
+    )
+])
+
+print("Server has initialized...")
 app.layout = html.Div(children=[
 
     # Title container
