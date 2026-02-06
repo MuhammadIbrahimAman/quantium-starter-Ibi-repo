@@ -16,58 +16,8 @@ df['Date'] = pd.to_datetime(df['Date'])
 # We will now initialze the dash app and define its layout
 app = Dash(__name__, title="Pink Morsel Sales Dashboard")
 
-# We will define its layout now
-app.layout = html.Div(children = [
-    html.H1(
-        "Pink Morsel Sales Visualization Graph" ,
-        style = { "textAlign": "center"}
-    ),
 
-    dcc.Graph(
-        id = "sales-line-chart",
-        figure = fig
-    )
-])
-
-print("Server has initialized...")
-app.layout = html.Div(children=[
-
-    # Title container
-   html.H1(
-    "Pink Morsel Sales Visualization Graph",
-    className="page-title"
-),
-
-    # Radio button container consisting of radio buttons with 5 options for users to choose from
-  html.Div(
-    dcc.RadioItems(
-        id="region-filter",
-        options=[
-            {"label": "All", "value": "all"},
-            {"label": "North", "value": "north"},
-            {"label": "East", "value": "east"},
-            {"label": "South", "value": "south"},
-            {"label": "West", "value": "west"},
-        ],
-        value="all",
-        inline=True,
-        className="radio-style"
-    ),
-    style={"textAlign": "center"}
-),
-    dcc.Graph(id="sales-line-chart")
-])
-
-# We will import the required libraries for making the line graph responsive
-from dash.dependencies import Input, Output
-
-# Defining the function to trigger by input and output values
-@app.callback(
-    Output("sales-line-chart", "figure"),
-    Input("region-filter", "value")
-)
-
-# The chart will update to reflect the option depending on if you choose a region or display normal graph if all is chosen
+# Function to generate the figure based on selected region
 def update_chart(selected_region):
     if selected_region == "all":
         filtered_df = df
@@ -78,19 +28,63 @@ def update_chart(selected_region):
         filtered_df,
         x="Date",
         y="Sales",
-        title=f"Pink Morsel Sales Trend ({selected_region.capitalize()})", # Dynamically set the title to make it look proper
+        title=f"Pink Morsel Sales Trend ({selected_region.capitalize()})",
         labels={"Date": "Date", "Sales": "Sales in $"},
     )
 
-    # Update the graph with some colors and font
     fig.update_layout(
-    title_x=0.5,   # <-- centers the title
-    plot_bgcolor="#f9f9f9",
-    paper_bgcolor="#ffffff",
-    font=dict(size=14)
+        title_x=0.5,
+        plot_bgcolor="#f9f9f9",
+        paper_bgcolor="#ffffff",
+        font=dict(size=14)
     )
 
     return fig
+
+
+# We will now define the title of the dashboard
+app.layout = html.Div(children=[
+
+    html.H1(
+        "Pink Morsel Sales Visualization Graph",
+        className="page-title"
+    ),
+
+    html.Div(
+        dcc.RadioItems(
+            id="region-filter",
+            options=[
+                {"label": "All", "value": "all"},
+                {"label": "North", "value": "north"},
+                {"label": "East", "value": "east"},
+                {"label": "South", "value": "south"},
+                {"label": "West", "value": "west"},
+            ],
+            value="all",
+            inline=True,
+            className="radio-style"
+        ),
+        style={"textAlign": "center"}
+    ),
+
+    # Graph starts empty which callback fills it
+    dcc.Graph(id="sales-line-chart", figure={})
+])
+
+
+# We will import the required libraries for making the line graph responsive
+from dash.dependencies import Input, Output
+
+# Defining the function to trigger by input and output values
+@app.callback(
+    Output("sales-line-chart", "figure"),
+    Input("region-filter", "value")
+)
+
+# Update and return the chart
+def update_graph(selected_region):
+    return update_chart(selected_region)
+
 
 # Deploy the app server
 if __name__ == "__main__":
