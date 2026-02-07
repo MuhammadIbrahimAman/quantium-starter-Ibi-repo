@@ -1,0 +1,40 @@
+** This project is split from the original project which you can access from: https://github.com/vagabond-systems/quantium-starter-repo**  
+** For those who want to check out the virtual internship, they can do so from here: https://www.theforage.com/simulations/quantium/software-engineering-j6ci**
+
+Alright, with the references to original project out of the way, lets talk about my overall thoughts about this entire Software Engineering job simulation.
+
+So, first of all, I would like to thank Quantium and Forage to give me the opportunity to work on approximate scenario of what a software engineer does in day to day basis. For someone, who graduated in Software Engineering and have some exposure to data science, this was a perfect simulation to learn the skills directly and apply them under my domain
+Now, I will have you know that this isn't just purely Software Engineering task, like sure, this project does have you go through end to end from receiving the raw csv files to testing the entire application but the half of this project involves data science and business intelligence tasks which would require cleaning the data, transforming them and then utilizing dash framework to create a dashboard.
+So that was actually a really neat way to apply the knowledge of data cleaning through pandas and see how its done in a real life like scenario. For more information about the tasks and the details associated with it, please check the readme file out.
+
+Anyways, so this was my first job simulation which I did through Forage and I daresay, that it was a pretty difficult one than what the starters simulations were available for me to do. Reason? Its because I was pretty confident in my knowledge of data science by this point, that I felt that I could tackle a simulation which was intermediate in rating and was fairly long(7-8 hours).
+Though it took me *much longer* to complete this simulation, atleast 5-6 days overall including few days I couldn't work on this project. After completing the project and reaching the finish line, I can definitely say that its pretty difficult project which shouldn't be undertaken if you have no idea about anything involved with step by step assignments, because if done then you are in for very hard time.
+
+So when I applied fkr this simulation, I came with knowledge of data science(through python's pandas library) and BI dashboards(through Microsoft PowerBi and Tableau) but I never worked on any practical tools of Software Engineering so things which were new for me were:
+- Version control through Git: I never used Git before nor had any idea about how to fork, clone, merge, pull or push any of the changes
+- Virtual environment: I have studied it but I have in practice never made a virtual environment before nor to set it up
+- Dash: I did create dashboards through PowerBi and Tableau but I never used Dash framework to create dashboards before and then host it through Flask
+- Testing: Again, I did study it in detail during bachelors but I never practically created test suite through pytest and then test my application
+- Automated scripting: I never studied or used bash scripting to automate the testing
+
+So given, I only had knowledge of Software Engineering principles but never worked on it before, I was exposed to fresh new knowledge of methodologies used in actual industry so it actually acquainted me with very valuable knowledge and actionable skills which I can say for surety, that I would be able to do it more easily next time its invovled.
+
+They gave a very brief under a minute video introducing the task to give some touch of live job, a background for the case which allows you to understand the work you have to perform and then the main objective itself which is accompanied with documentation and some helping material. 
+You are required to submit github repository file after completing and pushing the changes, and then you see the model answer which is bare minimum requirement to perform the task. After that congratulations for completing it! abd you can give your feedback before moving on to the task
+
+Awesome right? Yes "but" with a caveat. My honest thoughts after going through the entire simulation from head to toe, I could say that it was really difficult doing it with very little background knowledge in some of the tasks, and the material given are either too broad like an entire documentation given from which you are only needed to use a specific code or there are missing links for things you need to complete your task.
+This did make it little frustating at points to try to sift throughout it, find ways to actually learn things relavant to the taska and then apply it accordingly as there is no way around it...5/6 given tasks are mandatory and you couldn't proceed before doing a previous one
+Setting up a good and stable workbench was *arguably* the hardest task which took entire day and more to sort because it was such a mess learning about git commands and downloading git bash and then setting up a virtual environment that it almost made me regret doing it
+After that, things were relatively better, performing data cleaning wasn't so bad. It was straightforward probably because I had prior experience with it
+Learning dash although it was completely new to me, wasn't actually that hard to get around and have it working. Although the commands execution order and lack of specific resources did make it pain but it was really satisfying seeing the web server set up and my dashboard displayed. if you are curious about how my dashboard looks by the way, you should check out my read me section where I posted snippets of it
+After that, primary objective was basically done, next was essentially giving the way to filter the sales in the dashboard and performing UI decorations through css....which for those who know...could become really painful and messy, it took me unhealthy 3 to 4 hours of sitting to finally make it look pleasing. Good news? There was no definitive answer beyond making filtering option so there were no "rigjt" answe
+Next was actually creating a testing suite, and creating test case and making sure that they pass. Cant be that hard right?......sadly it was, it was more difficult to get the test suite actually running than actual testing itself and given not helpful reference materials, I got to discover that you need chrome driver or selenium to actually have test case visually display in browser before passing it. Fortunately, it wasn't very difficult and I got it work
+Now with all mandatory tasks gone, last was optional task for running bash script and to automate the testing created earlier. Sounds intimidating right? it did to me and seeing reference materialw as scary but to my frankly, **massive surprise** this was actually the easiest part of this entire task and was done in few lines. If you got time and sanity to spare, then I highly recommend doing it.
+
+Geez....so my suggestions for improving this simulation is to perhaps make specific videos teaching people how to perform the tasks so it could be helpful even for those with 0 background in some of the work like I was. make it more friendly and approachable even if its not beginner level
+If not this, then giving more narrowed down or specific material for the tasks instead of full documentation could really help and avoid drowning in the vast sea of information.
+
+Anyways, finally, I would like to answer the main objective of this task. So from doing all the data engineering and building the dashboard, we can confidentially and happily inform Souls food that their sales has actually **skyrocketed** since the time they increased the price.
+The analysis derived from this is that Pink Morsels are fairly popular item with very high demand so the sales only increases with up prices and revenue generated is much greater than before the 2nd half of 2021
+
+Final thoughts, this project despite its good difficulties still provides you with industry relavant skills in work environment and I can proudly display this as my first project in my portfolio!
