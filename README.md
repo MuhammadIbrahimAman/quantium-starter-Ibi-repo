@@ -1,6 +1,6 @@
 # Pink Morsel Sales Dashboard Project
 ![Python](https://img.shields.io/badge/Python-3.10-blue)
-![Python](https://img.shields.io/badge/Python-3.10-blue)
+![Pytest](https://img.shields.io/badge/Pytest-9.0.0-0A9EDC)
 ![Dash](https://img.shields.io/badge/Dash-3.4.0-00A3E0)
 ![Plotly](https://img.shields.io/badge/Plotly-6.5.2-3F4F75)
 ![Status](https://img.shields.io/badge/Tests-Passing-brightgreen)
@@ -36,13 +36,13 @@ The additional task included **automating test sute** through bash scripting to 
 
 ## 🗂️ Project Structure
 - The main directory for the project is quantium-starter-Ibi-repo/
-- app.py # Main Dash application
-- Sales_data.csv # Cleaned dataset
-- requirements.txt # Project dependencies
+- app.py                 # Main Dash application
+- Sales_data.csv         # Cleaned dataset
+- requirements.txt       # Project dependencies
 - run_tests.sh           # Bash script to run tests (bonus task)
-- dashboard.png # Screenshot of the dashboard
+- dashboard.png          # Screenshot of the dashboard
 - tests/ │
-  └── test_app.py      # Pytest test suite
+  └── test_app.py        # Pytest test suite
   
 
 ## ▶️ How to Run the App
@@ -94,7 +94,7 @@ Key packages used:
 - Plotly  
 - Pytest  
 
-Full list available in `requirements.txt`.
+Full list available in requirements.txt.
 
 
 ## 🏁 Final Notes
